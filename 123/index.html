@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Лови звёзды</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <header class="hud">
+      <div>Очки: <span id="score">0</span></div>
+      <div>Рекорд: <span id="best">0</span></div>
+      <div id="lives" aria-label="Жизни">❤❤❤</div>
+    </header>
+
+    <div class="stage">
+      <canvas id="canvas" width="480" height="640"></canvas>
+
+      <div id="overlay" class="overlay">
+        <h1 id="title">Лови звёзды</h1>
+        <p id="message">Ловите звёзды ⭐ и избегайте бомб 💣</p>
+        <button id="startBtn" type="button">Играть</button>
+        <small>Управление: стрелки / A D, мышь или касание. Пауза: P</small>
+      </div>
+    </div>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

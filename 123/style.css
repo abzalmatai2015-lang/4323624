@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1b2a5a 0%, #0a0f24 70%);
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+.game {
+  width: min(480px, 100vw);
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  font-size: 18px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px 12px 0 0;
+}
+
+#lives {
+  color: #ff4d6d;
+  letter-spacing: 2px;
+}
+
+.stage {
+  position: relative;
+  line-height: 0;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #0a0f24 url("space.jpg") center / cover no-repeat;
+  border-radius: 0 0 12px 12px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  text-align: center;
+  line-height: 1.4;
+  background: rgba(8, 12, 30, 0.8);
+  border-radius: 0 0 12px 12px;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay h1 {
+  font-size: 40px;
+  color: #ffd84d;
+  text-shadow: 0 0 18px rgba(255, 216, 77, 0.6);
+}
+
+.overlay p {
+  font-size: 20px;
+}
+
+.overlay small {
+  opacity: 0.65;
+  font-size: 13px;
+}
+
+button {
+  padding: 12px 36px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  background: #ffd84d;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s;
+  box-shadow: 0 4px 0 #c9a21a;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #c9a21a;
+}
